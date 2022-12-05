@@ -8,8 +8,11 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAoJiIKKCYiWgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAoJiIgKCYiuygmIhgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAoJiJDKCYi7SgmIlIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAoJiJzKCYi/SgmIqAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACgmIgooJiKmKCYi/ygmIuAoJiIOAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACgmIh8oJiLPKCYi/ygmIv4oJiI/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACgmIkEoJiLrKCYi/ygmIv8oJiKMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACgmInAoJiL8KCYi/ygmIv8oJiL/KCYiySgmIpwoJiJzKCYiKQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACgmIhYoJiJyKCYinCgmIsIoJiL8KCYi/ygmIv8oJiL/KCYinygmIgkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAoJiJTKCYi/ygmIv8oJiL5KCYiaAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAoJiIeKCYi7ygmIv8oJiLjKCYiNwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAoJiIDKCYixCgmIv8oJiK+KCYiFQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKCYigigmIv8oJiKJKCYiAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKCYiPigmIvAoJiJSAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKCYiEigmIrooJiInAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACgmIlooJiIMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//8AAP/3AAD/7wAA/88AAP8fAAD+PwAA/D8AAPgfAAD4DwAA/j8AAPx/AAD4/wAA8f8AAPf/AADv/wAA//8AAA==" rel="icon" type="image/x-icon" />
-    
-    <title>Ebill</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/a14fc7e537.js" crossorigin="anonymous"></script>
+	
+    <title>SPARK Dashboard</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="ebill/assets/css/bootstrap.css" rel="stylesheet">
@@ -43,7 +46,7 @@
 .panel-bolt .panel-heading {
     border-color: #464646;
     color: #fff;
-    background-color: #464646;
+    background-color: #00509d;
 }
 </style>
 
@@ -60,11 +63,11 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button> -->
-        <a class="navbar-brand" href="index.php"><i class="fa fa-bolt"></i> E-Billing System</a> 
+        <a class="navbar-brand" href="index.php"></a> 
     </div>
     <!-- /.navbar-header -->
     
-    <a style="position:absolute;top:35px;left:-1px;font-size:20px;color:#7f7f7f;padding:5px;background-color: #000;border-bottom-right-radius:10px; " href="#menu-toggle" id="menu-toggle" <i class="fa fa-dedent"></i></a>
+    <a style="position:absolute;top:35px;left:-1px;font-size:20px;color:#7f7f7f;padding:5px;background-color: #00509d;border-bottom-right-radius:10px; " href="#menu-toggle" id="menu-toggle" <i class="fa fa-dedent"></i></a>
 
     <!-- Top Menu Items -->
     <ul class="nav navbar-right top-nav" style="margin-right: 10px">
@@ -106,30 +109,29 @@
 </div><!-- /.modal -->      
 
                                                                                                                      <!-- Sidebar -->
-<div id="sidebar-wrapper">
-    <ul class="sidebar-nav">
-        <li class="active">
-            <a href="index.php"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
-        </li>
-        <li>
-            <a href="bill.php"><i class="fa fa-fw fa-dollar"></i> Bills </a>
-        </li>
-        <!-- new bills by bootstrap badges -->
-        <li>
-            <a href="transaction.php"><i class="fa fa-fw fa-table"></i> Transactions </a>
-        </li>
-        <li>
-            <a href="complaint.php"><i class="fa fa-fw fa-info"></i> Complaints </a>
-        </li>
-        <!-- processed bills as bootstrap badges -->
-    </ul>
-</div>
+<div class="wrapper">
+    <div class="sidebar">
+        <h2>SPARK</h2>
+        <ul>
+            <li><a href="#"><i class="fa-solid fa-gauge fa-fw"></i>Dashboard</a></li>
+            <li><a href="#"><i class="fa-solid fa-peso-sign fa-fw"></i>Bills</a></li>
+            <li><a href="#"><i class="fa-regular fa-calendar-check fa-fw"></i>Transactions</a></li>
+            <li><a href="#"><i class="fa-solid fa-circle-exclamation fa-fw"></i>Complaints</a></li>
+        </ul>  
+        
+        <div class="contact_us">
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+    </div>	
+
 <!-- /#sidebar-wrapper -->
 
         <!-- Page Content -->
         <div id="page-content-wrapper">
 
-            <div class="container-fluid">
+            <div class="main_content">
 
                 <!-- Page Heading -->
                 <div class="row">
@@ -148,7 +150,7 @@
                                     <div class="panel-heading">
                                         <div class="row">
                                             <div class="col-xs-3">
-                                                <i class="fa fa-dollar fa-3x"></i>
+                                                <i class="fa-solid fa-peso-sign fa-fw"></i>
                                             </div>
                                             <div class="col-md-9 text-right">
                                                 <div class="huge"><b></b>1</div>
@@ -165,7 +167,7 @@
                                     <div class="panel-heading">
                                         <div class="row">
                                             <div class="col-xs-3">
-                                                <i class="fa fa-dollar fa-3x"></i>
+                                                <i class="fa-solid fa-peso-sign fa-fw"></i>
                                             </div>
                                             <div class="col-md-9 text-right">
                                                 <div class="huge"><b></b>0</div>
@@ -205,8 +207,7 @@
 
         </div>
         <!-- /#page-content-wrapper -->
-
-    </div>
+</div>
     <!-- /#wrapper -->
 
 <!-- FOOTER -->
