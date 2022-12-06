@@ -75,6 +75,7 @@ hr {
 .navbar-default {
     background-color: #ffcb05;
     border-color: transparent;
+    button-color: #00509d;
 }
 .navbar-header > a:hover  {
     color:#e9eaf0;
