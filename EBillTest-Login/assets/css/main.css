@@ -73,7 +73,7 @@ hr {
     padding: 0;
 }
 .navbar-default {
-    background-color: rgba(247, 234, 52, 0.8);
+    background-color: #ffcb05;
     border-color: transparent;
 }
 .navbar-header > a:hover  {
