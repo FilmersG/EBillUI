@@ -4,7 +4,7 @@
 
 body {
     background-color: #f2f2f2;
-    font-family: 'Arial', sans-serif;
+    font-family: 'Raleway', sans-serif;
     font-weight: 300;
     font-size: 16px;
     color: #555;
@@ -75,7 +75,7 @@ hr {
 .navbar-default {
     background-color: #ffcb05;
     border-color: transparent;
-
+    
 }
 .navbar-header > a:hover  {
     color:#e9eaf0;
