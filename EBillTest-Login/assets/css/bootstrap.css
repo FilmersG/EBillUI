@@ -4684,7 +4684,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
   margin-top: 14px;
   margin-bottom: 14px;
 }
-;
+
 .navbar-text {
   margin-top: 15px;
   margin-bottom: 15px;
@@ -4702,7 +4702,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
 }
 
 .navbar-default {
-  background-color: #f8f8f8;
+  background-color: #4862f7;
   border-color: #e7e7e7;
 }
 
@@ -4717,7 +4717,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
 }
 
 .navbar-default .navbar-text {
-  color: #2f60ff;
+  color: #777777;
 }
 
 .navbar-default .navbar-nav > li > a {
