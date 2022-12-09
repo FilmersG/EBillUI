@@ -8,12 +8,11 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAoJiIKKCYiWgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAoJiIgKCYiuygmIhgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAoJiJDKCYi7SgmIlIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAoJiJzKCYi/SgmIqAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACgmIgooJiKmKCYi/ygmIuAoJiIOAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACgmIh8oJiLPKCYi/ygmIv4oJiI/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACgmIkEoJiLrKCYi/ygmIv8oJiKMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACgmInAoJiL8KCYi/ygmIv8oJiL/KCYiySgmIpwoJiJzKCYiKQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACgmIhYoJiJyKCYinCgmIsIoJiL8KCYi/ygmIv8oJiL/KCYinygmIgkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAoJiJTKCYi/ygmIv8oJiL5KCYiaAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAoJiIeKCYi7ygmIv8oJiLjKCYiNwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAoJiIDKCYixCgmIv8oJiK+KCYiFQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKCYigigmIv8oJiKJKCYiAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKCYiPigmIvAoJiJSAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKCYiEigmIrooJiInAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACgmIlooJiIMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//8AAP/3AAD/7wAA/88AAP8fAAD+PwAA/D8AAPgfAAD4DwAA/j8AAPx/AAD4/wAA8f8AAPf/AADv/wAA//8AAA==" rel="icon" type="image/x-icon" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/a14fc7e537.js" crossorigin="anonymous"></script>
 	
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"/>
-    <link rel="stylesheet" href="styles.css" />
-    <script src="https://kit.fontawesome.com/a14fc7e537.js" crossorigin="anonymous" ></script>
-
-    <title>SPARK Testing With Sidebar</title>
+    <title>SPARK Dashboard</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="ebill/assets/css/bootstrap.css" rel="stylesheet">
@@ -67,7 +66,7 @@
         <a class="navbar-brand" href="index.php"></a> 
     </div>
     <!-- /.navbar-header -->
-
+    
     <!-- Top Menu Items -->
     <ul class="nav navbar-right top-nav" style="margin-right: 10px">
         <li class="dropdown">
@@ -88,28 +87,42 @@
 </nav>
 <!-- /.navbar -->
 
-<!-- Sidebar -->
+
+ <!-- MODAL -> USER INFO -->
+<div class="modal fade" id="profile" tabindex="-1" role="dialog"  aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h3 class="modal-title"><b><i class="fa fa-fw fa-user"></i>PROFILE</b></h3>
+            </div>
+        <div class="modal-body text-center">
+            <h4>Name : <code>
+</code></h4>
+            <h4>Email : <code></code></h4>
+      
+        </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->      
+
+                                                                                                                     <!-- Sidebar -->
 <div class="wrapper">
     <div class="sidebar">
-      <h2></h2>
-      <ul>
-        <li>
-          <a href="#"><i class="fa-solid fa-gauge fa-fw"></i>Dashboard</a></li>
-        <li>
-          <a href="#"><i class="fa-solid fa-peso-sign fa-fw"></i>Bills</a></li>
-        <li>
-          <a href="#"
-            ><i class="fa-regular fa-calendar-check fa-fw"></i>Transactions</a></li>
-        <li>
-          <a href="#"><i class="fa-solid fa-circle-exclamation fa-fw"></i>Complaints</a></li>
-      </ul>
-
-      <div class="contact_us">
-        <a href="#"><i class="fa-brands fa-facebook"></i></a>
-        <a href="#"><i class="fa-brands fa-twitter"></i></a>
-        <a href="#"><i class="fa-solid fa-envelope"></i></a>
-      </div>
-    </div>
+        <h2></h2>
+        <ul>
+            <li><a href="#"><i class="fa-solid fa-gauge fa-fw"></i>Dashboard</a></li>
+            <li><a href="#"><i class="fa-solid fa-peso-sign fa-fw"></i>Bills</a></li>
+            <li><a href="#"><i class="fa-regular fa-calendar-check fa-fw"></i>Transactions</a></li>
+            <li><a href="#"><i class="fa-solid fa-circle-exclamation fa-fw"></i>Complaints</a></li>
+        </ul>  
+        
+        <div class="contact_us">
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+    </div>	
 
 <!-- /#sidebar-wrapper -->
 
@@ -194,6 +207,22 @@
         <!-- /#page-content-wrapper -->
 </div>
     <!-- /#wrapper -->
+
+<!-- FOOTER -->
+    <!-- jQuery Version 1.11.0 -->
+    <script src="ebill/assets/js/jquery-1.11.0.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="ebill/assets/js/bootstrap.min.js"></script>
+    
+    <!-- FORM VALIDATION -->
+    
+    <script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+    </script>
 </body>
 
 </html>
