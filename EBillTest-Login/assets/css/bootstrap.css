@@ -828,7 +828,7 @@ pre code {
 
 .row {
   margin-right: -15px;
-  margin-left: -20px;
+  margin-left: -15px;
 }
 
 .row:before,
@@ -2487,8 +2487,8 @@ fieldset[disabled] .btn-danger.active {
 
 .btn-success {
   color: #ffffff;
-  background-color: #5cb85c;
-  border-color: #4cae4c;
+  background-color: #00509d;
+  border-color: #00509d;
 }
 
 .btn-success:hover,
