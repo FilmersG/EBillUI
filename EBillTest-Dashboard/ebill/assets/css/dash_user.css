@@ -11,32 +11,13 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: 'sans-serif','Source Sans Pro';
     font-weight: 500;
 }
 
 #wrapper {
     padding-left: 10px;
-    padding-top: 5px;
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    transition: all 0.5s ease;
-}
-
-#wrapper.toggled {
-    padding-left: 225px;
-}
-
-#sidebar-wrapper {
-    z-index: 1000;
-    position: fixed;
-    left: 250px;
-    width: 0;
-    height: 100%;
-    margin-left: -250px;
-    overflow-y: auto;
-    background: #000;
+    padding-top: 0px;
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
@@ -59,12 +40,13 @@ h6 {
 }
 /* Top Navigation */
 .navbar{
-    background: #000;
+    background: #00509d;
 }
 .navbar {
     border-bottom-right-radius: 21px 21px;
     border-top-right-radius: 4px 4px;
     margin-right:2px;
+    margin-left:200px;
 }
 .navbar-brand{
     font-family: 'Lato', sans-serif;
@@ -75,7 +57,7 @@ h6 {
 }
 .top-nav {
     padding: 0 20px;
-    background: #000;
+    background: #00509d;
 }
 .top-nav>li>a {
     padding-top: 15px;
@@ -147,7 +129,7 @@ ul.alert-dropdown {
 
 @media(min-width:768px) {
     #wrapper {
-        padding-left: 225px;
+        padding-left: 0px;
     }
 
     #wrapper.toggled {

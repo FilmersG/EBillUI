@@ -1,3 +1,34 @@
+<?php 
+require_once("Includes/config.php");
+require_once("Includes/session.php");
+// if ($count===0) {
+//     $err_login="There were some problem";
+// }
+if(isset($_SESSION['logged']))
+{
+    if ($_SESSION['logged'] == true)
+    {
+        if ($_SESSION['account']=="admin") {
+                header("Location:admin/index.php");
+            }
+        elseif ($_SESSION['account']=="user") {
+                header("Location:user/index.php");
+            }
+    }  
+    else  {
+        header("Location:../index.php");
+      }  
+}
+
+if(isset($_POST['login_submit'])) {
+    if(!(isset($_POST['email']))) {
+        if(!(isset($_POST['pass']))) {
+            location('index.php');    
+        }
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,7 +40,7 @@
     <meta name="author" content="">
     <link href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAoJiIKKCYiWgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAoJiIgKCYiuygmIhgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAoJiJDKCYi7SgmIlIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAoJiJzKCYi/SgmIqAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACgmIgooJiKmKCYi/ygmIuAoJiIOAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACgmIh8oJiLPKCYi/ygmIv4oJiI/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACgmIkEoJiLrKCYi/ygmIv8oJiKMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACgmInAoJiL8KCYi/ygmIv8oJiL/KCYiySgmIpwoJiJzKCYiKQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACgmIhYoJiJyKCYinCgmIsIoJiL8KCYi/ygmIv8oJiL/KCYinygmIgkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAoJiJTKCYi/ygmIv8oJiL5KCYiaAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAoJiIeKCYi7ygmIv8oJiLjKCYiNwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAoJiIDKCYixCgmIv8oJiK+KCYiFQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKCYigigmIv8oJiKJKCYiAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKCYiPigmIvAoJiJSAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKCYiEigmIrooJiInAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACgmIlooJiIMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//8AAP/3AAD/7wAA/88AAP8fAAD+PwAA/D8AAPgfAAD4DwAA/j8AAPx/AAD4/wAA8f8AAPf/AADv/wAA//8AAA==" rel="icon" type="image/x-icon" />
 
-    <title>SPARK Login</title>
+    <title>E-bill System</title>
 
     <!-- Bootstrap core CSS -->
     <link href="assets/css/bootstrap.css" rel="stylesheet">
@@ -31,31 +62,16 @@
     <![endif]-->
 </head>
 
-
 <body>
 
     <!-- Fixed navbar -->
     <div class="navbar navbar-default navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
-                <a class="navbar-brand" href="index.php"><b>S P A R K</b></a>
+                <a class="navbar-brand" href="index.php"><b>E-Billing System</b></a>
             </div>
             <div class="navbar-collapse collapse" >
-                <!-- NOTE
-SINGLE PAGE FORM ALONG WITH VALIDATION
-NO PHP LEAKS BACK TO THE INDEX 
- -->
-
-<form action="index.php" class="navbar-form navbar-right" role="form" method="post">
-    <div class="form-group">
-        <input type="text" placeholder="Email" name="email" id="email" class="form-control">
-    </div>
-    <div class="form-group">
-        <input type="password" placeholder="Password" name="pass" id="pass" class="form-control">
-    </div>
-    <button dtype="login_submit" class="btn btn-success" onclick=" validateForm() ;">Sign In</button>
-</form>
-
+                <?php include("login.php"); ?>
             </div>
             <!--/.nav-collapse -->
         </div>
@@ -72,56 +88,7 @@ NO PHP LEAKS BACK TO THE INDEX
                     <!-- /col-lg-6 -->
                     <div class="col-lg-6">
                         <h1>Sign Up</h1>
-                        <!-- NOTE
-SINGLE PAGE FORM ALONG WITH VALIDATION
-NO PHP LEAKS BACK TO THE INDEX 
- -->
-
-<form action="signup.php" method="post" class="form-horizontal" role="form" onsubmit="return validateForm()">
-<center>
-    <div class="row form-group">
-        <div class="col-md-12">
-            <input type="name" class="form-control" name="name" id="name" placeholder="Full Name" required>
-            <!-- <label></label> -->
-        </div>
-    </div>
-    <div class="form-group">
-        <div class="col-md-12">
-            <input type="email" class="form-control" name="email" id="email" placeholder="Email" required>
-            <!-- <label></label> -->
-        </div>
-    </div>
-    <div class="form-group">
-        <div class="col-md-12">
-            <input type="password" class="form-control" name="inputPassword" id="inputPassword" placeholder="Password" required>
-            <!-- <label></label> -->
-        </div>
-    </div>
-    <div class="form-group">
-        <div class="col-md-12">
-            <input type="password" class="form-control" name="confirmPassword" placeholder="Confirm Password" required>
-            <!-- <label></label><label></label> -->
-        </div>
-    </div>
-    <div class="form-group">
-        <div class="col-md-12">
-            <input type="tel" class="form-control" name="contactNo" placeholder="Contact No." required>
-            <!-- <label></label> -->
-        </div>
-    </div>
-    <div class="form-group">
-        <div class="col-md-12">
-            <input type="address" class="form-control" name="address" placeholder="Address" required>
-            <!-- <label></label> -->
-        </div>
-    </div>
-    <div class="form-group">
-        <div class="col-md-10">
-            <button name="reg_submit" class="btn btn-primary">Sign Up</button>
-        </div>
-    </div>
-    </center>
-</form>
+                        <?php include("signup.php"); ?>
                     </div>
                     <!-- /col-lg-6 -->
 
@@ -145,21 +112,21 @@ NO PHP LEAKS BACK TO THE INDEX
 
         <div class="row mt centered">
             <div class="col-lg-4">
-                <img src="assets/img/sir1.png" width="180" alt="">
+                <img src="assets/img/ser01.png" width="180" alt="">
                 <h4>1 - Login</h4>
                 <p></p>
             </div>
             <!--/col-lg-4 -->
 
             <div class="col-lg-4">
-                <img src="assets/img/sir2.png" width="180" alt="">
+                <img src="assets/img/ser02.png" width="180" alt="">
                 <h4>2 - Peruse Bills</h4>
                 <p></p>
             </div>
             <!--/col-lg-4 -->
 
             <div class="col-lg-4">
-                <img src="assets/img/sir3.png" width="180" alt="">
+                <img src="assets/img/ser03.png" width="180" alt="">
                 <h4>3 - Transact</h4>
                 <p></p>
             </div>
@@ -170,9 +137,9 @@ NO PHP LEAKS BACK TO THE INDEX
     </div>
     <!-- /container -->
 
-    <div class="container">
-
-</div>
+    <?php 
+    require_once("footer.php");
+    ?>
 
     <!--=======================JS=========================== -->
     <!-- Placed at the end of the document so the pages load faster -->
