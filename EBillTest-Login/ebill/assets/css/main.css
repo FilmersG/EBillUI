@@ -73,9 +73,8 @@ hr {
     padding: 0;
 }
 .navbar-default {
-    background-color: #ffcb05;
+    background-color: rgba(38,46,107,.8);
     border-color: transparent;
-    
 }
 .navbar-header > a:hover  {
     color:#e9eaf0;
@@ -107,7 +106,7 @@ i {
 /* HeaderWrap */
 
 #headerwrap {
-    background-color: #00509d;
+    background-color: #0e175b;
     padding-top: 70px;
     padding-bottom: 0px;
     background-attachment: relative;
