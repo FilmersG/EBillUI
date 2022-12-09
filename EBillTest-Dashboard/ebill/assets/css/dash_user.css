@@ -24,6 +24,25 @@ h6 {
     transition: all 0.5s ease;
 }
 
+#wrapper.toggled {
+    padding-left: 225px;
+}
+
+#sidebar-wrapper {
+    z-index: 1000;
+    position: fixed;
+    left: 250px;
+    width: 0;
+    height: 100%;
+    margin-left: -250px;
+    overflow-y: auto;
+    background: #000;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
 #wrapper.toggled #sidebar-wrapper {
     width: 230px;
 }
@@ -46,7 +65,7 @@ h6 {
     border-bottom-right-radius: 21px 21px;
     border-top-right-radius: 4px 4px;
     margin-right:2px;
-    margin-left:200px;
+    margin-left: 200px;
 }
 .navbar-brand{
     font-family: 'Lato', sans-serif;
@@ -63,7 +82,7 @@ h6 {
     padding-top: 15px;
     padding-bottom: 15px;
     line-height: 20px;
-    color: #999;
+    color: #fff;
 }
 .top-nav>li>a:hover, 
 .top-nav>li>a:focus, 
@@ -188,5 +207,3 @@ footer .footer-below {
 .badge-custom-primary{
     background-color: #428bca;
 }
-
-
