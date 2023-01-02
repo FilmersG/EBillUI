@@ -1635,7 +1635,7 @@ pre code {
 }
 
 table {
-  max-width: 150%;
+  max-width: 130%;
   background-color: transparent;
 }
 
@@ -1644,7 +1644,7 @@ th {
 }
 
 .table {
-  width: 150%;
+  width: 130%;
   margin-bottom: 20px;
 }
 
