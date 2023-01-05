@@ -126,6 +126,9 @@ sub {
 }
 
 img {
+  position: relative;
+  top: 5px;
+  right: 170px;
   border: 0;
 }
 
