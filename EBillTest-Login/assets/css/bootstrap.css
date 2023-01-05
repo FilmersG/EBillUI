@@ -125,7 +125,7 @@ sub {
   bottom: -0.25em;
 }
 
-img,1 {
+.SPARK1 {
   position: relative;
   top: 5px;
   right: 170px;
